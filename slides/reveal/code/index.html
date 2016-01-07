@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/3.1.2/rx.all.js"></script>
+  <title>Search Wiki</title>
+</head>
+<body>
+  <input id="input" name="search" />
+  <div id="results"></div>
+  <script language="javascript">
+    $(document).ready(function() {
+      var $input = $('#input');
+      var $results = $('#results')
+
+      var keyups = Rx.Observable.fromEvent($input, 'keyup')
+        .map(function(e) {return e.target.value;})
+        .filter(function(text) {return text.length > 2;})
+        .throttle(500)
+        .distinctUntilChanged()
+
+      function searchWiki(term) {
+          return $.ajax({
+              url: 'https://en.wikipedia.org/w/api.php',
+              dataType: 'jsonp',
+              data: {
+                  action: 'opensearch',
+                  format: 'json',
+                  search: term
+              }
+          }).promise();
+      }
+
+      var suggestions = keyups.flatMapLatest(searchWiki)
+
+      suggestions.subscribe(
+        function(data) {
+          var ret = data[1].map(function(item) {return '<li>'.concat(item, '</li>');});
+          $results.html(ret)
+        },
+        function(error) {return $results.html('<li>'.concat('Error: ', error, '</li>'));},
+        function() {console.log('finished!');}
+      );
+    });
+  </script>
+</body>
+</html>
