@@ -28,13 +28,13 @@
 
 ----
 
-![](assets/images/latency.png)
-
-----
-
 ### bloom filter
 
 ![](assets/images/bloomfilter.png)
+
+----
+
+![](assets/images/latency.png)
 
 
 # File
@@ -50,7 +50,7 @@
 
 * relational
 * NoSQL (key-value, document)
-* read (or write) optimized storage for large data
+* read (or write) optimized storage libraries / systems for large data
 * limited by CAP theorem
 
 ----
@@ -60,7 +60,19 @@
 # Relational DB
 
 * SQlite
-* MySQL, PostalgreSQL
+* MySQL, postgresql, etc.
+* [comparison between mysql & postgresql](https://www.wikivs.com/wiki/MySQL_vs_PostgreSQL)
+
+----
+
+### Postgresql
+
+* better concurrency support, better performance (?)
+* Direct JSON support (see: [postgrest](https://github.com/begriffs/postgrest))
+* server-side scripting with map-reduce support
+* [PostGIS](http://postgis.net/)
+* [Full text search](https://blog.lateral.io/2015/05/full-text-search-in-milliseconds-with-postgresql/)
+* Better [Tree](http://www.slideshare.net/quipo/trees-in-the-database-advanced-data-structures/22-Fixing_the_Adjacency_List_Model), and [Graph](http://www.slideshare.net/quipo/rdbms-in-the-social-networks-age) support
 
 # Key-value DB
 
@@ -113,24 +125,25 @@ Fully managed, distributed key-value database provided by amazon, based on [Dyna
 * Drawback
     - really hard to use (at first time)
     - hard to pick up a right hash key / range key
-    - the more index you create, the more you pay
+    - eventually consistency (you can [consistent read](http://stackoverflow.com/questions/20870041/amazon-dynamodb-strong-consistent-reads-are-they-latest-and-how))
     - the more capacity you provision, the more you pay
 
 ----
 
 ### Consistent hashing
 
-![](assets/images/consistent-hashing1.png)
+![](assets/images/consistent-hashing.png)
 
 From: [distributed algorithms in nosql](https://highlyscalable.wordpress.com/2012/09/18/distributed-algorithms-in-nosql-databases/)
 
 ----
 
-![](assets/images/consistent-hashing2.jpg)
+![](assets/images/consistent-hashing1.png)
 
-From: [Why riak just works](http://basho.com/posts/technical/why-riak-just-works/)
 
 ----
+
+### DynamoDB example
 
 ```javascript
 function queryExpires(expires) {
@@ -170,10 +183,21 @@ function queryExpires(expires) {
 * Drawbacks
     - Use crappy mmap / fsync() for < 3.0
     - Still young and unsteady (especially auto sharding)
+    - By default it's CP!
     - easy to be misused
         * too many indexes v.s. too little indexes
         * try to use autoincrement id
         * try to join among different collections
+
+----
+
+### Why mongodb is CP?
+
+* Sharding level: one authoritative shard per data segment (C), shards work independently (P), if a shard is not available its data isn't available (A)
+
+* Replica set level: one authoritative master node (C)
+
+See: [High Availability In MongoDB](http://stackoverflow.com/questions/16248656/high-availability-in-mongodb)
 
 # ElasticSearch
 
@@ -186,6 +210,8 @@ Built on top of apache lucence, provide an easy to use interface to build search
     - not suitable for main data store
 
 ----
+
+### ElasticSeach example
 
 ```javascript
 client.search({
@@ -205,19 +231,14 @@ client.search({
 });
 ```
 
-# Summary
-
-----
-
-![](assets/images/nosql-triangle.png)
-
-From: [Visual guide to nosql systems](http://blog.nahurst.com/visual-guide-to-nosql-systems)
 
 # Queue
 
 * ZeroMQ / nano
 * SQS
 * RabbitMQ / ActiveMQ / etc.
+
+(might give in a separated session)
 
 # What?
 
@@ -248,5 +269,7 @@ assert.deepEqual(oo, o);
 
 * Serialize
 * Deserialize
+
+![](assets/images/serialization.jpg)
 
 # Q&A
