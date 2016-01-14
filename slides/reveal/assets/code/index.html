@@ -8,7 +8,8 @@
 </head>
 <body>
   <input id="input" name="search" />
-  <div id="results"></div>
+  <div id="results" style="height:300px"></div>
+  <img src="./code.png" width="800px"/>
   <script language="javascript">
     $(document).ready(function() {
       var $input = $('#input');
@@ -17,8 +18,8 @@
       var keyups = Rx.Observable.fromEvent($input, 'keyup')
         .map(function(e) {return e.target.value;})
         .filter(function(text) {return text.length > 2;})
-        .throttle(500)
-        .distinctUntilChanged()
+        .debounce(500)
+        .distinctUntilChanged();
 
       function searchWiki(term) {
           return $.ajax({
@@ -32,7 +33,7 @@
           }).promise();
       }
 
-      var suggestions = keyups.flatMapLatest(searchWiki)
+      var suggestions = keyups.flatMapLatest(searchWiki);
 
       suggestions.subscribe(
         function(data) {

@@ -1,6 +1,6 @@
 % Concurrency
 % Tyr Chen
-% Jan 3rd, 2015
+% Jan 7th, 2015
 
 ----
 
@@ -9,7 +9,9 @@
 # The Future of Computing
 
 * more cores in a DIE
-* systems are getting complex
+* more DIEs in a server
+* more servers for a system
+* systems are getting more complicated
 
 # Concurrency vs. parallelism
 
@@ -18,7 +20,7 @@
 * One is about structure, one is about execution
 * Structuring your solution in a concurrent way to get parallelism for free
 
-# A little bit about parallelism
+# A little bit about CPU parallelism
 
 * Bit level (32bit vs 64bit)
 * Instruction execution level (pipeline, out of order)
@@ -27,7 +29,19 @@
 
 ----
 
-The folowing figures are from Rob Pike's famous talk: [Concurrency is not 
+![Instruction pipeline](assets/images/pipeline.jpg)
+
+----
+
+[![Out of order execution](assets/images/out_of_order.gif)](http://taco.cse.tamu.edu/utsa-www/cs5513-fall07/lecture5.html)
+
+----
+
+The thoughts backed hardware parallelism can be applied to software too
+
+----
+
+The folowing gopher figures are from Rob Pike's famous talk: [Concurrency is not 
 Parallelism](https://www.youtube.com/watch?v=cN_DpYBzKso), [slides](http://concur.rspace.googlecode.com/hg/talk/concur.html)
 
 # Simplest system structure
@@ -40,7 +54,7 @@ Parallelism](https://www.youtube.com/watch?v=cN_DpYBzKso), [slides](http://concu
 
 they're racing...
 
-# An immediate thought
+# Solver for racing
 
 ![](assets/images/gophersimple4.jpg)
 
@@ -218,7 +232,7 @@ Joe Armstrong: [Erlang software for a concurrent world](http://www.infoq.com/pre
 
 ----
 
-It is hard to explain STM, but we can make analogy with database transaction
+similar to database transaction
 
 ![](assets/images/stm.png)
 
@@ -304,11 +318,17 @@ function extractZip(filename) {
 
 datatypes that represent a value 'over time'
 
+![](assets/images/value_with_time.jpg)
+
 ----
 
-![](assets/images/observable.png)
+![](assets/images/click_stream.jpg)
 
-# Example (1)
+----
+
+![](assets/images/observable.jpg)
+
+# How to create
 
 ```javascript
 const extractLogObservable = function(filename) {
@@ -331,7 +351,7 @@ const extractLogObservable = function(filename) {
 }
 ```
 
-# Example (2)
+# [Typeahead](https://s3-us-west-2.amazonaws.com/eng-assets/slides/reveal/assets/code/index.html)
 
 ```javascript
 var throttledInput$ = Rx.DOM.keyup($search)
