@@ -17,7 +17,7 @@ function crawlSync(urls) {
         body: request.getSync(url)
       }
     } catch(e) {
-      logger.warn('url %s cannot be retrieved', url);
+      logger.warn('url %s cannot be retrieved: %s', url, e);
       return {
         url,
         body: null
@@ -72,6 +72,17 @@ function crawl(urls) {
 
 # Does it work?
 
+# Not exactly...
+
+```
+[ec2-user@ip-172-30-1-30 ~]$ sysctl net.ipv4.ip_local_port_range
+net.ipv4.ip_local_port_range = 32768  61000
+[ec2-user@ip-172-30-1-30 ~]$ sysctl net.ipv4.tcp_fin_timeout
+net.ipv4.tcp_fin_timeout = 60
+```
+
+System cannot guarantee more than (61000 - 32768) / 60 = 470 sockets at any given time
+
 # Third try
 
 ```javascript
@@ -92,6 +103,7 @@ function crawl(urls) {
     });
   }
   crawlOne(0);
+  return results;
 }
 ```
 
@@ -101,6 +113,7 @@ function crawl(urls) {
 
 * recursive code is hard to read and modify
 * what if urls is a really big array? 1M?
+* hard to optimize
 
 ---
 
@@ -201,6 +214,42 @@ cawl(urls, 3).subscribe(
 );
 ```
 
+---
+
+## An optimized one
+
+```javascript
+function crawl(urls, numRetries) {
+  return Rx.Observable.from(urls)
+    .map(url => {
+      return Rx.Observable.create(observer => {
+        request.get(url, (err, response, body) {
+          if (err || response.statusCode !== 200) {
+            observer.onError({url, err});
+          } else {
+            observer.onNext({url, body: body});
+          }
+          observer.onCompleted();
+        });
+      })
+      .retry(numRetries)
+      .catch(err => {
+        logger.warn('url %s cannot be retrieved: %s', err.url, err.err);
+        return Rx.Observable.empty();
+      });
+    })
+    .mergeAll()
+    .buffer(100)
+    .map(item => Rx.Observable.return(value).delay(1000))
+    .concatAll()
+}
+
+cawl(urls, 3).subscribe(
+  data => console.log(data),
+  err => console.log(err),
+  () => console.log('Done!')
+);
+```
 
 
 # How to create
@@ -451,6 +500,6 @@ function reGenerateHLSByIdList(videoIdList) {
     * loadAllCatObservable.flatMap(loadCat(url, 1))
     * Rx.Observable.fromEvent(focusEvent).filter(isLoaded(page)).map(loadCat(url, page)).switchLatest()
 
-
+# A complex example (demo)
 
 # Q & A
