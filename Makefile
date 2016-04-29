@@ -3,6 +3,7 @@ OUTPUT_FOLDER=./output
 
 all: $(SUBDIR)
 	@aws s3 sync output s3://eng-assets/slides
+	@aws s3 sync output s3://tchen-assets/slides --profile stapin
 	@echo "All slides are built."
 
 clean:

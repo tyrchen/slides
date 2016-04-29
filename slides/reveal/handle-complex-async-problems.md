@@ -239,7 +239,7 @@ function crawl(urls, numRetries) {
       });
     })
     .mergeAll()
-    .buffer(100)
+    .buffer(400)
     .map(item => Rx.Observable.return(value).delay(1000))
     .concatAll()
 }
@@ -418,7 +418,9 @@ convert an Observable that emits Observables into a single Observable that emits
 
 # Cold v.s. Hot
 
-# publish
+---
+
+## publish
 
 convert an ordinary Observable into a connectable Observable
 

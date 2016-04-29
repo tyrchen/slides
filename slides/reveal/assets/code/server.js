@@ -68,8 +68,4 @@ const handler = metrics$
   .bufferWithTimeOrCount(BUFFER_TIME, BUFFER_COUNT)
   .subscribe(log, error, log)
 
-setTimeout(() => {
-  log('Finished successfully')
-  handler.dispose()
-}, 10000)
 
