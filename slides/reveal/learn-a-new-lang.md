@@ -55,10 +55,11 @@
 7. Build a demo project from scratch
 8. Build a demo project use the most-stared-github starter kit (if any)
 9. Read good open source projects (and think how and why)
-10. Build a more serious project
-11. Compare with other Languages
-12. Teach it
-13. Go back to step 9
+10. Contribute to open source projects (send the f**king pull requests)
+11. Build a more serious project
+12. Compare with other Languages
+13. Teach it
+14. Go back to step 9
 
 # Let's take elixir as an Example
 
