@@ -4,25 +4,29 @@
 
 # Why growth?
 
+# Question: what after product?
+
+![创业是一场马拉松，而非百米冲刺](assets/images/growth/growth_launch.png)
+
+
 ---
-
-# Question: what should we do after product is launched?
-
-![](assets/images/growth/growth_launch.png)
-
-
-# Build measure learn
 
 ![now its measure and learn time](assets/images/leanstartup.png)
 
-# Growth steps
+# When to grow?
+
+![product market fit](assets/images/growth/pmfit.png)
+
+# How to grow?
+
+# Steps
 
 ![](assets/images/growth/growth_steps.png)
 
 
-# User Acquisition
+# Acquisition
 
-> Acquisition: getting people to come to your product
+> getting people to come to your product
 
 * Organic search
 * SEO / SEM / ASO (App Store Optimization)
@@ -61,12 +65,13 @@ We still need to throw money to the market to get targeted audiences:
 * Brand
 * Special events
 * Massive acquisition
-* NOTE: it is healthy model when LTV >= UAC
+* NOTE: sustainable when LTV >= UAC
 
 # How to spend money?
 
-* Campaigns: search engine, social media, etc.
 * press releases
+* Campaigns in new media: search engine, social media, etc.
+* Campaigns in traditional media: TV, news paper, etc.
 * Burst Campaigns: to achieve a goal that we got massive users in a short time
 
 # Core paid media pricing models (in a campaign)
@@ -83,14 +88,14 @@ We still need to throw money to the market to get targeted audiences:
 * Characteristics
     - I want users who reads travel blogs, websites
 * Behavior
-    - I want users wo go abroad for family travel at least 1 time  each year
+    - I want users who go abroad for family travel at least 1 time  each year
 
 # Life Time Value (LTV)
 
 * LTV is projected revenue that a customer will generate during their lifetime
 * LTV = annual profit per customer x average year customer retain x (customer / user  ratio)
     - e.g.: (3500 * 40%) x 3 x 0.5% = 1400 x 3 x 0.5% = 21
-* What is the LTV of starbucks you think? [](https://blog.kissmetrics.com/wp-content/uploads/2011/08/ltv.png)
+* What is the LTV of starbucks you think? [click me](https://blog.kissmetrics.com/wp-content/uploads/2011/08/ltv.png)
 
 # How to track?
 
@@ -148,7 +153,7 @@ We still need to throw money to the market to get targeted audiences:
 
 * provide them weapons
     - tools for sharing to weibo / wechat / 朋友圈
-    - tools for sharing to youku / instagram?
+    - tools for sharing to youku / nice
     - tools to write feedback, like, etc.
     - tools to convert their raw material to a better, viral media (e.g. 锤子便签)
 * incentive for them to endorse

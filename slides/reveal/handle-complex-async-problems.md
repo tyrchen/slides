@@ -1,6 +1,6 @@
 % Handle complex async problems
 % Tyr Chen
-% Feb 11th, 2015
+% Feb 11th, 2016
 
 ----
 
@@ -124,7 +124,7 @@ function crawl(urls) {
     * race condition
     * memory leak (especially on event handler)
     * complicated state machine (or internal states)
-    * error handling 
+    * error handling
 
 # One more example...
 
