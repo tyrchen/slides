@@ -91,38 +91,38 @@ sock.on('message', function(msg){
 
 # REQ/RES
 
-![](assets/images/req.png)
+![](assets/images/zmq/req.png)
 
 # REQ/RES (load balancer)
 
-![](assets/images/lb.png)
+![](assets/images/zmq/lb.png)
 
 # PUB/SUB
 
-![](assets/images/pubsub.png)
+![](assets/images/zmq/pubsub.png)
 
 # PUB/SUB (forwarded proxy)
 
-![](assets/images/proxy.png)
+![](assets/images/zmq/proxy.png)
 
 # PUSH/PULL (map/reduce)
 
-![](assets/images/push.png)
+![](assets/images/zmq/push.png)
 
 # PUSH/PULL (fair queue)
 
-![](assets/images/push1.png)
+![](assets/images/zmq/push1.png)
 
 # PUSH/PULL (pipeline)
 
-![](assets/images/pipeline.png)
+![](assets/images/zmq/pipeline.png)
 
 # Router/Dealer
 
-![](assets/images/router-dealer.png)
+![](assets/images/zmq/router-dealer.png)
 
 # Mixed
 
-![](assets/images/mixed.png)
+![](assets/images/zmq/mixed.png)
 
 # Q & A
