@@ -1,4 +1,4 @@
-SUBDIR=slides/reveal slides/impress
+SUBDIR=slides/reveal slides/impress slides/shower
 OUTPUT_FOLDER=./output
 
 all: $(SUBDIR)
