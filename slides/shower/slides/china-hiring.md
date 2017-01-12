@@ -1,12 +1,10 @@
-% TubiTV China Team Hiring
-% TubiTV engineering team
+% Tubi TV China Team Hiring
+% Tubi TV engineering team
 % Jan 6th, 2017
 
-## Who is TubiTV? {.slide}
+## Who is Tubi TV? {.slide}
 
-> Tubi TV is a free, ad-supported television and movie platform found on the web and online streaming devices. Launched in 2014 by ddRise, Tubi TV holds the largest library of free TV and movies on the web. Content partners include Paramount Pictures, Metro-Goldwyn-Mayer (MGM), and Lionsgate, among dozens more.
-
-(need a formal marketing sentence)
+> Tubi TV is a free, ad-supported, premium TV and movie platform found on the web and online streaming devices. Launched in 2014 by ddRise, Tubi TV holds the largest library of free TV and movies on the web. Content partners include Paramount Pictures, Metro-Goldwyn-Mayer (MGM), and Lionsgate, among dozens more. We believe everyone should have the right to watch great entertainment without cost barriers and user experience hurdles.
 
 ## Our core business {.slide}
 
@@ -19,6 +17,8 @@ We support streaming contents to 10+ platforms, including android, iOS, and roku
 ![](images/tubitv_apps.jpg)
 
 ## Our Growth {.slide}
+
+We've grown 9-10x in 2016. Rapid growth should be expected in 2017 onwards for US and internationally.
 
 Need a figure here...
 
@@ -88,13 +88,12 @@ We're hiring great engineers who are **proactive**, **passionate** and **self-mo
 
 ## The definition of AWESOMENESS {.slide}
 
-* Understand **why** we do stuffs and the value.
+* Understand **why** we build stuffs.
 * Have a strong sense of **ownership**.
 * Really **finish** stuffs, and **deliver** with full fledged solutions.
 * Zero tolerance to **shit** in products.
 * Zero tolerance to **recurring** tasks and bugs.
-* Being **experts** to stuffs but has an **open mind** on other technology and methodology.
-* Can **switch** tech stacks correspondingly (learn new things fast).
+* Being **experts** to stuffs but willing to **switch** tech stacks and methodology.
 * Easily ramp up new team members and always **make your team a better team**
 
 ## Position: Sr. backend engineer {.slide}
