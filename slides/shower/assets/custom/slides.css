@@ -14,6 +14,10 @@
   margin: 0 30px;
 }
 
+.slide > table {
+  margin-left: -60px;
+}
+
 .slide > img {
   margin: 0px;
 }

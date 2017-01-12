@@ -4,7 +4,7 @@
 
 ## Who is Tubi TV? {.slide}
 
-> Tubi TV is a free, ad-supported, premium TV and movie platform found on the web and online streaming devices. Launched in 2014 by ddRise, Tubi TV holds the largest library of free TV and movies on the web. Content partners include Paramount Pictures, Metro-Goldwyn-Mayer (MGM), and Lionsgate, among dozens more. We believe everyone should have the right to watch great entertainment without cost barriers and user experience hurdles.
+> Tubi TV is a free, ad-supported, premium TV and movie platform found on the web and online streaming devices. Launched in 2014 by adRise, Tubi TV holds the largest library of free TV and movies on the web. Content partners include Paramount Pictures, Metro-Goldwyn-Mayer (MGM), and Lionsgate, among dozens more. We believe everyone should have the right to watch great entertainment without cost barriers and user experience hurdles.
 
 ## Our core business {.slide}
 
@@ -88,12 +88,12 @@ We're hiring great engineers who are **proactive**, **passionate** and **self-mo
 
 ## The definition of AWESOMENESS {.slide}
 
-* Understand **why** we build stuffs.
+* Understand **why** we build stuff.
 * Have a strong sense of **ownership**.
-* Really **finish** stuffs, and **deliver** with full fledged solutions.
+* Really **finish** stuff, and **deliver** with full fledged solutions.
 * Zero tolerance to **shit** in products.
 * Zero tolerance to **recurring** tasks and bugs.
-* Being **experts** to stuffs but willing to **switch** tech stacks and methodology.
+* Being **experts** to stuff but willing to **switch** tech stacks and methodology.
 * Easily ramp up new team members and always **make your team a better team**
 
 ## Position: Sr. backend engineer {.slide}
@@ -120,11 +120,11 @@ We're hiring great engineers who are **proactive**, **passionate** and **self-mo
 * Experience with Spark & MLib
 * The ability to prioritize and bias towards simple solutions
 
-## Interns (TBD) {.slide}
+## Interns {.slide}
 
 * CS background, be able to work full weeks for 6+ months.
 * Solid programming skills with one of: nodejs, python.
-* Willing to learn new stuffs
+* Willing to learn new stuff
 * Able to build features with proper guide.
 
 ## Intersted? Send you CV to:<br /> **jobs.china at tubitv.com** {.slide .shout}
