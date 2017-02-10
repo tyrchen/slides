@@ -1,6 +1,6 @@
 % Tubi TV China Team Hiring
 % Tubi TV engineering team
-% Jan 6th, 2017
+% Jan 24th, 2017
 
 ## Who is Tubi TV? {.slide}
 
@@ -18,9 +18,7 @@ We support streaming contents to 10+ platforms, including android, iOS, and roku
 
 ## Our Growth {.slide}
 
-We've grown 9-10x in 2016. Rapid growth should be expected in 2017 onwards for US and internationally.
-
-Need a figure here...
+> We've grown 7-10x in terms of viewership in 2016. Rapid growth should be expected in 2017 onwards for US and internationally.
 
 ## Our Engineering Culture {.slide}
 
@@ -53,7 +51,7 @@ Need a figure here...
 
 ## Technical stack {.slide}
 
-* backend: nodejs, scala, python, ...
+* backend: nodejs, elixir, scala, python, ...
 * frontend:
     * react/redux/sass
     * ObjC (iOS and tvOS)
@@ -70,7 +68,7 @@ Need a figure here...
 
 ## What do we offer? {.slide}
 
-* Very competitive package (salary + options + bonus + benefit)
+* Very competitive package
 * A fast growing and learning environment
 * Business trip to Silicon Valley
 * Flexible work style (Say NO! to 996)
@@ -99,9 +97,9 @@ We're hiring great engineers who are **proactive**, **passionate** and **self-mo
 ## Position: Sr. backend engineer {.slide}
 
 * 5+ years of professional software development or 3+ years if directly working with NodeJS.
-* Expert knowledge of async programming, server-side javascript and system engineering.
+* Expert knowledge of concurrent programming, server-side javascript and system engineering.
 * a passion for clean-API design - modular and testable.
-* Good experience in python / scala is a plus.
+* Good experience in elixir / python / scala is a plus.
 * Experience with any of the following a plus but not required: AdTech, VAST.
 
 ## Position: Sr. frontend engineer {.slide}
@@ -115,7 +113,7 @@ We're hiring great engineers who are **proactive**, **passionate** and **self-mo
 
 * A very robust understanding of CS fundamentals
 * Five years of industry experience
-* Background in statistics, machine learning, recommender systems and machine-learned ranking
+* Background in statistics, machine learning and recommendation systems
 * Exceptional coding skills, primarily in Python and Scala
 * Experience with Spark & MLib
 * The ability to prioritize and bias towards simple solutions
@@ -123,7 +121,7 @@ We're hiring great engineers who are **proactive**, **passionate** and **self-mo
 ## Interns {.slide}
 
 * CS background, be able to work full weeks for 6+ months.
-* Solid programming skills with one of: nodejs, python.
+* Solid programming skills with one of: nodejs, elixir, scala.
 * Willing to learn new stuff
 * Able to build features with proper guide.
 
@@ -133,4 +131,4 @@ We're hiring great engineers who are **proactive**, **passionate** and **self-mo
 
 * [tubitv.com](http://tubitv.com)
 * [about Tubi TV](https://vimeo.com/159562706/c3109bb4fa)
-* [China recruiting viode](https://v.qq.com/x/page/s0314lhjlgz.html)
+* [China recruiting video](https://v.qq.com/x/page/s0314lhjlgz.html)

@@ -31,7 +31,7 @@
   padding-bottom: 34px;
   margin-bottom: 10px;
   color: #585a5e;
-  border-bottom: 1px solid #585a5e;
+  border-bottom: 1px dashed #585a5e;
 }
 
 .slide figure {

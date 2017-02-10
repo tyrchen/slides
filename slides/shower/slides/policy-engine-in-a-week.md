@@ -316,7 +316,7 @@ iex(17)> PolicyEngine.get_next_compiling_interval
 | supervision      | supervisord, pm2, etc.     | supervision tree       |
 | timer event      | typically a worker         | :timer.apply_interval  |
 | KV data          | redis, memcached           | ets, dets              |
-| relational data  | Postgres, mysql            | mnesia                 |
+| relational data  | Postgres, mysql            | mnesia (with a limitation) |
 | concurrent state | db, zookeeper, etc.        | process, Agent         |
 
 
