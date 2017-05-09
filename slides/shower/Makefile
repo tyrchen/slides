@@ -29,7 +29,7 @@ $(HTMLS):$(OUTPUT_FOLDER)/%.html:slides/%.md
 
 mv:
 	@echo "mv file from snapshots to assets/images/$(TARGET)"
-	@mv ~/snapshots/snapshot\ $(shell date +'%Y-%m-%d\ at\ \%l.%M')*.jpg $(ASSETS)/images/$(TARGET)
+	@mv ~/snapshots/snapshot\ $(shell date +'%Y-%m-%d\ at\%l.%M')*.jpg $(ASSETS)/images/$(TARGET)
 	@sips -Z 1600 $(ASSETS)/images/$(TARGET)
 
 gh-pages: build
