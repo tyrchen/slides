@@ -146,3 +146,24 @@ worst case O(n/k) while k = size of hash table
 * [Immutable data and react](https://www.youtube.com/watch?v=I7IdS-PbEgI)
 * [The blockchain](http://chimera.labs.oreilly.com/books/1234000001802/ch07.html)
 * [Pragmatic Programming Techniques](http://horicky.blogspot.com/2009/11/nosql-patterns.html)
+
+## Questions (1) {.slide}
+
+Data structures to choose: array, list, stack, queue, tree, graph, set, map
+
+1. You have to store social network “feeds”. You do not know the size, and
+things may need to be dynamically added.
+2. You need to store undo/redo operations in a word processor.
+3. You need to evaluate an expression (i.e., parse).
+4. You need to store the friendship information on a social networking site. I.e., who is friends with who.
+5. You need to store an image (1000 by 1000 pixels) as a bitmap.
+
+
+## Questions (2) {.slides}
+
+1. To implement printer spooler so that jobs can be printed in the order of their arrival.
+2. To implement back functionality in the internet browser.
+3. To store the possible moves in a chess game.
+4. To store a set of fixed key words which are referenced very frequently.
+5. To store the customer order information in a drive-in burger place. (Customers keep on coming and they have to get their correct food at the payment/food collection window.)
+6. To store the genealogy information of biological species.
