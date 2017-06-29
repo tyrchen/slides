@@ -19,7 +19,7 @@
 }
 
 .slide > img {
-  margin: 0px;
+  margin: auto;
 }
 
 .slide > blockquote {
@@ -40,7 +40,7 @@
 }
 .slide > figure > img {
   height: 500px;
-  margin: 0;
+  margin: auto;
   background: yellow;
   position: absolute;
   top: 50%;
@@ -75,4 +75,9 @@ code{
 
 .slide strong {
   color: orange;
+}
+
+.slide > iframe {
+  margin: auto;
+  display: block;
 }

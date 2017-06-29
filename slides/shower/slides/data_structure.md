@@ -48,12 +48,27 @@
 * array is usually mutable, tuple not
 * fixed, not easy to grow
 
+## efficient immutable "array" {.slide}
+
+* Change a single element, copy entire array is time-consuming
+* Need a structural sharing solution
+    * DAG
+    * Persistent structure
+
+## Index Vector Trie {.slide}
+
+![](images/iamt.jpg)
+
+## Index Vector Trie (modify) {.slide}
+
+![](images/iamt1.jpg)
+
 ## List {.slide .shout}
 
 ## What is a list? {.slide}
 
-* usually double linklist (or a bit array mapped trie)
-    * for linklist, can append or prepend O(1)
+* usually double linklist
+* can append or prepend O(1)
 * unless stored, length(list) is O(n)
     * python O(1), erlang O(n)
 * find, insert_at, remove_at need traverse at O(n)
@@ -63,23 +78,32 @@
 
 ![](images/double-linklist.png){width=800px}
 
-## Bit Array Mapped Trie {.slide}
-
-![](images/iamt.jpg)
-
 ## Map {.slide .shout}
 
 ## What is a map? {.slide}
 
-* originally implemented as hash array with linklist
-* usually a HAMT nowadays (Hash Array Mapped Trie)
-* hash function need to be consistent and uniformly distributed
+* a container holding any number key -> value pairs
+* could be implemented as hash array with proper collision management
+    * python dict
+    * chaining v.s. open addressing with probe
+* red-black tree
+    * C++ std map
+* HAMT (Hash Array Mapped Trie) for FP
+    * erlang, scala, clojure, etc.
 
-## Hash table with LL {.slide}
+## Complexity Comparison {.slide}
+
+![](images/hash_vs_rb.webp){width=800px height=385px}
+
+## Hash table with chaining {.slide}
 
 ![](images/hash_ll.jpg){width=800px height=410px}
 
 worst case O(n/k) while k = size of hash table
+
+## Hash table with RB tree {.slide}
+
+![](images/rb_tree.png)
 
 ## HAMT {.slide}
 
@@ -159,7 +183,7 @@ things may need to be dynamically added.
 5. You need to store an image (1000 by 1000 pixels) as a bitmap.
 
 
-## Questions (2) {.slides}
+## Questions (2) {.slide}
 
 1. To implement printer spooler so that jobs can be printed in the order of their arrival.
 2. To implement back functionality in the internet browser.
