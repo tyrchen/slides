@@ -21,7 +21,7 @@ watch:
 	@fswatch -o templates/ slides/ assets/custom | xargs -n1 -I{} make build
 
 run:
-	@http-server $(OUTPUT_FOLDER) -p 8000 -c-1
+	@http-server $(OUTPUT_FOLDER) -p 8001 -c-1
 
 $(HTMLS):$(OUTPUT_FOLDER)/%.html:slides/%.md
 		@echo "Creating slides $@ with file $<."

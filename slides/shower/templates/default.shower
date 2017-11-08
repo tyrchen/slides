@@ -69,6 +69,11 @@
 			#cover p a {
 			  color:#FFF;
 			}
+      pre .hljs {
+        max-height: 400px;
+        overflow-y: scroll;
+      }
+      li {line-height: 40px;}
 		</style>
 	</section>
 	$body$
