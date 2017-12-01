@@ -5,7 +5,7 @@ ASSETS=assets
 SLIDES=$(wildcard slides/*.md)
 HTMLS=$(SLIDES:slides/%.md=$(OUTPUT_FOLDER)/%.html)
 
-build: clean $(OUTPUT_FOLDER) copy-assets $(HTMLS)
+build: $(OUTPUT_FOLDER) copy-assets $(HTMLS)
 
 clean:
 	@rm -f $(OUTPUT_FOLDER)/*.html

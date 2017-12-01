@@ -46,7 +46,7 @@
 	<section class="slide" id="cover">
 		<h2>$title$</h2>
 		<p>Brought to you by <a href="https://github.com/adrise">$author$</a></p>
-    <img src="images/cover1.jpg" alt="" class="cover">
+    <img src="images/cover.jpg" alt="" class="cover">
 		<!--
 			To apply styles to the certain slides
 			set slide ID to get needed elements
@@ -79,8 +79,8 @@
 	$body$
 
   <section class="slide shout" id="thanks">
-		<h2></h2>
-		<img src="images/tubitv.png" alt="" class="cover">
+		<h2>Q&A</h2>
+		<img src="images/cover.jpg" alt="" class="cover">
 		<style>
 			#thanks h2 {
         color:#FFF;
@@ -91,7 +91,7 @@
 	</section>
 
 	<p class="badge">
-		<a href="https://github.com/adrise/">Follow us on GitHub</a>
+		<a href="https://github.com/tyrchen/">Follow me on GitHub</a>
 	</p>
 	<!--
 		To hide progress bar from entire presentation
