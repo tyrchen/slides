@@ -38,7 +38,7 @@
   height: 500px;
   position: relative;
 }
-.slide > figure > img {
+.slide figure > img {
   height: 500px;
   margin: auto;
   background: yellow;
@@ -47,6 +47,10 @@
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+
+.slide figcaption {
+  visibility: hidden;
 }
 
 .slide.shout h2 {
@@ -69,8 +73,8 @@ code{
 }
 
 .slide pre code {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .slide strong {
