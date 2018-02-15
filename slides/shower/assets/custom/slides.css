@@ -38,8 +38,9 @@
   height: 500px;
   position: relative;
 }
-.slide figure > img {
-  height: 500px;
+
+.slide figure > img, .slide p > img {
+  height: 600px;
   margin: auto;
   background: yellow;
   position: absolute;
