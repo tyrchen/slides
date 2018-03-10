@@ -78,9 +78,9 @@
 	</section>
 	$body$
 
-  <section class="slide shout" id="thanks">
-		<h2>Q&A</h2>
-		<img src="images/cover.jpg" alt="" class="cover">
+  <section class="slide shout bg" id="thanks">
+		<h2>Thanks & Q&A</h2>
+    <img src="images/qrcode.jpg" class="qrcode">
 		<style>
 			#thanks h2 {
         color:#FFF;

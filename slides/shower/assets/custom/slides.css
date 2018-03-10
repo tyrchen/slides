@@ -86,3 +86,11 @@ code{
   margin: auto;
   display: block;
 }
+
+.slide .qrcode {
+  margin: auto;
+  width: 200px;
+  right: 35px;
+  bottom: 40px;
+  position: absolute;
+}
