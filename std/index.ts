@@ -26,5 +26,11 @@ const App = {
   release: Cella.app.release,
 };
 
+const DocumentDb = {
+  get: Cella.ddb.get,
+  put: Cella.ddb.put,
+  delete: Cella.ddb.remove,
+};
+
 export type { RequestContext };
-export { Router, App };
+export { Router, App, DocumentDb };
