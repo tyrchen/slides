@@ -26,5 +26,5 @@ const App = {
   release: Cella.app.release,
 };
 
-export { Router, App };
 export type { RequestContext };
+export { Router, App };
