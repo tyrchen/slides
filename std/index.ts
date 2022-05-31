@@ -1,11 +1,45 @@
+type Handler = (req: Request, ctx: RequestContext) => Promise<Response>;
+
+declare namespace Cella {
+  namespace app {
+    function valid(data: Uint8Array): Uint8Array | null | undefined;
+    function publish(
+      app: string,
+      commit: string,
+      org: string,
+      data: Uint8Array
+    ): void;
+    function release(
+      app: string,
+      commit: string,
+      org: string,
+      data: Uint8Array
+    ): void;
+  }
+
+  namespace ddb {
+    function put(key: string, value: Uint8Array): Promise<void>;
+    function get(key: string): Promise<Uint8Array>;
+    function remove(key: string): Promise<void>;
+  }
+
+  namespace http {
+    function addRoute(method: string, path: string, handler: Handler): void;
+  }
+
+  namespace rdb {
+    function find(sql: string): Promise<[object]>;
+    function findOne(sql: string): Promise<object>;
+    function execute(sql: string): Promise<number>;
+  }
+}
+
 declare interface RequestContext {
   qs: { [key: string]: any };
   handler?: string;
   params: { [key: string]: string };
   allow_header?: string;
 }
-
-type Handler = (req: Request, ctx: RequestContext) => Promise<Response>;
 
 const route_post = (path: string, handler: Handler) =>
   Cella.http.addRoute('POST', path, handler);
