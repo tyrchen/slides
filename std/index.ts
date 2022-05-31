@@ -1,25 +1,26 @@
 type Handler = (req: Request, ctx: RequestContext) => Promise<Response>;
-
+type ZeroCopyBuffer = Uint8Array | ArrayBuffer;
+type OptionZeroCopyBuffer = ZeroCopyBuffer | null | undefined;
 declare namespace Cella {
   namespace app {
-    function valid(data: Uint8Array): Uint8Array | null | undefined;
+    function valid(data: ZeroCopyBuffer): OptionZeroCopyBuffer;
     function publish(
       app: string,
       commit: string,
       org: string,
-      data: Uint8Array
+      data: ZeroCopyBuffer
     ): void;
     function release(
       app: string,
       commit: string,
       org: string,
-      data: Uint8Array
+      data: ZeroCopyBuffer
     ): void;
   }
 
   namespace ddb {
-    function put(key: string, value: Uint8Array): Promise<void>;
-    function get(key: string): Promise<Uint8Array>;
+    function put(key: string, value: ZeroCopyBuffer): Promise<void>;
+    function get(key: string): Promise<ZeroCopyBuffer>;
     function remove(key: string): Promise<void>;
   }
 
