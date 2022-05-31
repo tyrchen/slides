@@ -42,17 +42,19 @@ declare interface RequestContext {
   allow_header?: string;
 }
 
-const route_post = (path: string, handler: Handler) =>
-  Cella.http.addRoute('POST', path, handler);
-const route_get = (path: string, handler: Handler) =>
-  Cella.http.addRoute('GET', path, handler);
-const route_put = (path: string, handler: Handler) =>
-  Cella.http.addRoute('PUT', path, handler);
-
 const Router = {
-  post: route_post,
-  get: route_get,
-  put: route_put,
+  post: (path: string, handler: Handler) =>
+    Cella.http.addRoute('POST', path, handler),
+  get: (path: string, handler: Handler) =>
+    Cella.http.addRoute('GET', path, handler),
+  put: (path: string, handler: Handler) =>
+    Cella.http.addRoute('PUT', path, handler),
+  patch: (path: string, handler: Handler) =>
+    Cella.http.addRoute('PATCH', path, handler),
+  delete: (path: string, handler: Handler) =>
+    Cella.http.addRoute('DELETE', path, handler),
+  options: (path: string, handler: Handler) =>
+    Cella.http.addRoute('OPTIONS', path, handler),
 };
 
 const App = {
