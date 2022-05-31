@@ -69,5 +69,11 @@ const DocumentDb = {
   delete: Cella.ddb.remove,
 };
 
+const RelationalDb = {
+  find: Cella.rdb.find,
+  findOne: Cella.rdb.findOne,
+  execute: Cella.rdb.execute,
+};
+
 export type { RequestContext };
-export { Router, App, DocumentDb };
+export { Router, App, DocumentDb, RelationalDb };
