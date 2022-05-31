@@ -31,7 +31,7 @@ declare namespace Cella {
   namespace rdb {
     function find(sql: string): Promise<[object]>;
     function findOne(sql: string): Promise<object>;
-    function execute(sql: string): Promise<number>;
+    function execute(sql: string): Promise<[number, number]>;
   }
 }
 
