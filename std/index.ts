@@ -43,6 +43,8 @@ declare interface RequestContext {
 }
 
 const Router = {
+  any: (path: string, handler: Handler) =>
+    Cella.http.addRoute('*', path, handler),
   post: (path: string, handler: Handler) =>
     Cella.http.addRoute('POST', path, handler),
   get: (path: string, handler: Handler) =>
